@@ -1,0 +1,12 @@
+body {
+    background: rgba(148, 101, 125, 0.8);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+h1 {
+    text-align: center;
+}
