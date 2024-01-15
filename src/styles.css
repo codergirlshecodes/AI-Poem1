@@ -30,7 +30,7 @@ main {
 
 form {
     margin-top: 8px;
-    padding: 20px; 
+    padding: 80px; 
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -95,6 +95,8 @@ div img {
     text-align: left;
     
 }
+
+
  footer{
     text-align: center;
     font-size: 13px;

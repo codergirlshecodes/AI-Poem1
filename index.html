@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>AI Poem</title>
 </head>
@@ -20,12 +21,14 @@
                 required 
                 autocomplete="off"
                 class="instructions"
+                id="user-instructions"
                 />
                 <input type="Submit" class="submit-button" />
             </form>
             <div>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe68FCVqdw3c_X_Mp85e6nrlFPnAQjOqWjA&usqp=CAU" alt="Bird Image">
             </div>
+            <div class="poem-container">
             <div class="poem" id="poem"></div>
         </main>
 
