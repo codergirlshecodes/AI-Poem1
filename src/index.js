@@ -1,4 +1,4 @@
-let typewriter; 
+let typewriter;
 
 function displayPoem(response) {
     console.log("poem generated");
@@ -7,8 +7,10 @@ function displayPoem(response) {
     poemElement.innerHTML = response.data.answer;
 }
 
-function generatePoem(event) {
-    event.preventDefault();
+function generatePoem() {
+    if (typewriter) {
+        typewriter.stop();
+    }
 
     let instructionsElement = document.querySelector("#user-instructions");
     let userInstructions = instructionsElement.value;
@@ -25,19 +27,40 @@ function generatePoem(event) {
     axios.get(apiURL).then(displayPoem);
 }
 
-let instructionsElement = document.querySelector("#user-instructions");
+document.addEventListener("DOMContentLoaded", function () {
+    
+    let instructionsElement = document.querySelector("#user-instructions");
+    instructionsElement.focus();
 
-instructionsElement.addEventListener("focus", () => {
-    if (typewriter) {
-        typewriter.stop();
-    }
+    instructionsElement.addEventListener("focus", () => {
+        if (typewriter) {
+            typewriter.stop();
+        }
+    });
+
+    instructionsElement.addEventListener("blur", () => {
+        if (typewriter) {
+            typewriter.start();
+        }
+    });
+
+    let poemFormElement = document.querySelector("#poem-generator-form");
+    poemFormElement.addEventListener("submit", function (event) {
+        event.preventDefault();
+        generatePoem();
+    });
+
+    let submitButton = document.querySelector(".submit-button");
+
+    submitButton.addEventListener("mousedown", () => {
+        submitButton.style.transform = "scale(0.95)";
+        submitButton.style.transition = "transform 0.2s";
+    });
+
+    submitButton.addEventListener("mouseup", () => {
+        submitButton.style.transform = "scale(1)";
+
+        
+        generatePoem();
+    });
 });
-
-instructionsElement.addEventListener("blur", () => {
-    if (typewriter) {
-        typewriter.start();
-    }
-});
-
-let poemFormElement = document.querySelector("#poem-generator-form");
-poemFormElement.addEventListener("submit", generatePoem);
