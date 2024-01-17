@@ -16,22 +16,24 @@
 
         <main>
             <div class="form-container">
-            <form id="poem-generator-form">
-                <input type="text" placeholder="Enter the topic of the poem" 
-                autofocus 
-                required 
-                autocomplete="off"
-                class="instructions"
-                id="user-instructions"
-                />
-                <input type="submit" class="submit-button" />
-            </form>
-            <div class="hint">i.e: Winter, Laughter or Fall</div>
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe68FCVqdw3c_X_Mp85e6nrlFPnAQjOqWjA&usqp=CAU" alt="Bird Image">
+                <form id="poem-generator-form">
+                    <input type="text" placeholder="Enter the topic of the poem" 
+                    autofocus 
+                    required 
+                    autocomplete="off"
+                    class="instructions"
+                    id="user-instructions"
+                    />
+                    <input type="submit" class="submit-button" />
+                </form>
+                <div class="hint">i.e: Winter, Laughter or Fall</div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe68FCVqdw3c_X_Mp85e6nrlFPnAQjOqWjA&usqp=CAU" alt="Bird Image">
+                </div>
+                <div class="poem-container">
+                    <div class="poem" id="poem"></div>
+                </div>
             </div>
-            <div class="poem-container">
-            <div class="poem" id="poem"></div>
         </main>
 
         <script src="src/index.js"></script>
@@ -44,5 +46,6 @@
             </p>
         </footer>
     </div>
+
 </body>
 </html>
