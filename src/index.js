@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const instructionsInput = document.getElementById('user-instructions');
     const poemContainer = document.getElementById('poem');
 
-    // Other containers
     const aiPoemContainer = document.getElementById('ai-poem');
     const aiQuotesContainer = document.getElementById('ai-quotes');
     const aiJokeContainer = document.getElementById('ai-joke');
@@ -55,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         let userInstructions = instructionsElement.value;
 
-        // Use a variable to store the container ID based on the content type
+    
         let containerId;
 
-        // Determine which container to update based on the content type being searched
+    
         switch (userInstructions.toLowerCase()) {
             case "poem":
                 containerId = "ai-poem";
@@ -79,12 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 containerId = "ai-babynames";
                 break;
             default:
-                // Use a default container if no specific content type is matched
+            
                 containerId = "ai-poem";
                 break;
         }
 
-        // Call the function with the determined container ID
+    
         generateContent(userInstructions, userInstructions, containerId);
     });
 
@@ -94,10 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         let userInstructions = instructionsElement.value;
 
-        // Use a variable to store the container ID based on the content type
+    
         let containerId;
 
-        // Determine which container to update based on the content type being searched
         switch (userInstructions.toLowerCase()) {
             case "poem":
                 containerId = "ai-poem";
@@ -118,12 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 containerId = "ai-babynames";
                 break;
             default:
-                // Use a default container if no specific content type is matched
+                
                 containerId = "ai-poem";
                 break;
         }
 
-        // Call the function with the determined container ID
+    
         generateContent(userInstructions, userInstructions, containerId);
     });
 });
